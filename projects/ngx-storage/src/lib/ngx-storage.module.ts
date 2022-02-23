@@ -12,6 +12,32 @@ import {
 } from './tokens';
 import { ModuleConfig } from './types';
 
+
+/**
+ * ngx-storage library module that provides components a.k.a services
+ * required to use the library effectively.
+ *
+ * To integrate the module in an angular application:
+ *
+ * @example
+ * // app.module.ts
+ * import {NgModule} from '@angular/core';
+ * import { StorageModule } from '@iazlabs/ngx-storage';
+ *
+ * // Load providers in your application root
+ *
+ * NgModule({
+ *  // declarations, providers, etc...
+ *  imports: [
+ *    // Other modules
+ *     StorageModule.forRoot({
+ *        secret: 'SECRET',
+ *        prefix: 'prefix' // Not required, include only to prefix keys before they are added to the cache
+ *    })
+ *  ]
+ * })
+ * export class AppModule {}
+ */
 @NgModule()
 export class StorageModule {
   static forRoot(config: ModuleConfig): ModuleWithProviders<StorageModule> {

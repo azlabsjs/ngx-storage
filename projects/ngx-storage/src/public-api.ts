@@ -1,7 +1,7 @@
 /*
  * Public API Surface of ngx-storage
  */
-export * from './lib/ngx-storage.module';
+export { StorageModule } from './lib/ngx-storage.module';
 export { StorageInterface, ModuleConfig } from './lib/types';
 export { InMemoryStorage } from './lib/in-memory';
 export { SessionStorage } from './lib/session';
@@ -10,5 +10,5 @@ export {
   DOCUMENT_LOCAL_STORAGE,
   DOCUMENT_SESSION_STORAGE,
   DEFAULT_STORAGE,
-  FAKE_STORAGE
+  FAKE_STORAGE,
 } from './lib/tokens';
