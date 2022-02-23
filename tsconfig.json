@@ -8,6 +8,20 @@
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
+    "paths": {
+      "@iazlabs/ngx-storage": [
+        "dist/iazlabs/ngx-storage/iazlabs-ngx-storage",
+        "dist/iazlabs/ngx-storage"
+      ],
+      "lib": [
+        "dist/lib/lib",
+        "dist/lib"
+      ],
+      "ngx-storage": [
+        "dist/ngx-storage/ngx-storage",
+        "dist/ngx-storage"
+      ]
+    },
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
