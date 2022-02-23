@@ -6,6 +6,7 @@
     "@angular/core": "^13.2.0"
   },
   "dependencies": {
+    "@iazlabs/secure-web-storage": "^0.1.3",
     "tslib": "^2.3.0"
   }
 }
