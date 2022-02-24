@@ -29,9 +29,6 @@ jobs:
         with:
           useLockFile: false
 
-      - name: Test
-        run: npm run test ngx-storage
-
       - name: Build
         run: npm run build ngx-storage
 
