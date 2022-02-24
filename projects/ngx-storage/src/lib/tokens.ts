@@ -1,7 +1,5 @@
-import { inject, InjectionToken } from '@angular/core';
+import { InjectionToken } from '@angular/core';
 import { StorageInterface } from '@iazlabs/secure-web-storage';
-import { InMemoryStorage } from './in-memory';
-import { SessionStorage } from './session';
 
 // @internal
 export const STORAGE_SECRET = new InjectionToken<string>(
