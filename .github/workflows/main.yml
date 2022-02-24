@@ -32,6 +32,6 @@ jobs:
       - name: Build
         run: npm run build ngx-storage
 
-      - run: cd dist && npm publish
+      - run: cd dist/ngx-storage && npm publish
     env:
       NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
