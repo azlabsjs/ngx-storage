@@ -5,13 +5,14 @@ import { InMemoryStorage } from './in-memory';
 import { LocalStorage } from './local';
 import { SessionStorage } from './session';
 import {
+  DEFAULT_STORAGE,
   DOCUMENT_LOCAL_STORAGE,
   DOCUMENT_SESSION_STORAGE,
+  FAKE_STORAGE,
   STORAGE_PREFIX,
   STORAGE_SECRET,
 } from './tokens';
 import { ModuleConfig } from './types';
-
 
 /**
  * ngx-storage library module that provides components a.k.a services
@@ -59,11 +60,9 @@ export class StorageModule {
           provide: DOCUMENT_SESSION_STORAGE,
           useFactory: (document: Document) => {
             const { defaultView } = document;
-
             if (!defaultView) {
               throw new Error('Browser window object is not available');
             }
-
             return createStorage(defaultView.sessionStorage, config.secret);
           },
           deps: [DOCUMENT],
@@ -78,6 +77,14 @@ export class StorageModule {
             return createStorage(defaultView.localStorage, config.secret);
           },
           deps: [DOCUMENT],
+        },
+        {
+          provide: DEFAULT_STORAGE,
+          useClass: SessionStorage,
+        },
+        {
+          provide: FAKE_STORAGE,
+          useClass: InMemoryStorage,
         },
       ],
     };

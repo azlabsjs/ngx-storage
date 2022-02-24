@@ -84,13 +84,7 @@ export const DOCUMENT_LOCAL_STORAGE = new InjectionToken<Storage>(
  * }
  */
 export const DEFAULT_STORAGE = new InjectionToken<StorageInterface>(
-  'SESSION STORAGE PROVIDER TOKEN',
-  {
-    providedIn: 'root',
-    factory: () => {
-      return inject(SessionStorage);
-    },
-  }
+  'SESSION STORAGE PROVIDER TOKEN'
 );
 
 /**
@@ -116,12 +110,6 @@ export const DEFAULT_STORAGE = new InjectionToken<StorageInterface>(
  *  // Work with or use the session storage object
  * }
  */
- export const FAKE_STORAGE = new InjectionToken<StorageInterface>(
-  'IN MEMORY STORAGE PROVIDER TOKEN',
-  {
-    providedIn: 'root',
-    factory: () => {
-      return inject(InMemoryStorage);
-    },
-  }
+export const FAKE_STORAGE = new InjectionToken<StorageInterface>(
+  'IN MEMORY STORAGE PROVIDER TOKEN'
 );

@@ -1,0 +1,41 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
+
+name: Ngx-storage package deployment on github packages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+          scope: '@iazlabs'
+      - name: Check npm version
+        run: npm -v
+
+      - name: Install deps and build (with cache)
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+
+      - name: Test
+        run: npm run test ngx-storage
+
+      - name: Build
+        run: npm run build ngx-storage
+
+      - run: cd dist && npm publish
+    env:
+      NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
