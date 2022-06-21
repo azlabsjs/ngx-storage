@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { createStorage } from '@iazlabs/secure-web-storage';
+import { createStorage } from '@azlabsjs/secure-web-storage';
 import { InMemoryStorage } from './in-memory';
 import { LocalStorage } from './local';
 import { SessionStorage } from './session';
@@ -23,7 +23,7 @@ import { ModuleConfig } from './types';
  * @example
  * // app.module.ts
  * import {NgModule} from '@angular/core';
- * import { StorageModule } from '@iazlabs/ngx-storage';
+ * import { StorageModule } from '@azlabsjs/ngx-storage';
  *
  * // Load providers in your application root
  *

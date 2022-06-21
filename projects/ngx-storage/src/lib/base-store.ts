@@ -1,4 +1,4 @@
-import { StorageInterface } from '@iazlabs/secure-web-storage';
+import { StorageInterface } from '@azlabsjs/secure-web-storage';
 
 /**
  * Provide an base implementation that other storage

@@ -1,4 +1,4 @@
-import { StorageInterface as BaseStorageInterface } from '@iazlabs/secure-web-storage';
+import { StorageInterface as BaseStorageInterface } from '@azlabsjs/secure-web-storage';
 
 export type ModuleConfig = {
   secret: string;

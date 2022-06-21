@@ -9,16 +9,7 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "paths": {
-      "@iazlabs/ngx-storage": [
-        "dist/iazlabs/ngx-storage/iazlabs-ngx-storage",
-        "dist/iazlabs/ngx-storage"
-      ],
-      "lib": [
-        "dist/lib/lib",
-        "dist/lib"
-      ],
-      "ngx-storage": [
-        "dist/ngx-storage/ngx-storage",
+      "@azlabsjs/ngx-storage": [
         "dist/ngx-storage"
       ]
     },

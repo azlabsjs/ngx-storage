@@ -12,7 +12,7 @@ import { StorageInterface } from './types';
  * using javascript {@see JSON.stringify()} api.
  *
  * @example
- * import {SessionStorage} from '@iazlabs/ngx-storage';
+ * import {SessionStorage} from '@azlabsjs/ngx-storage';
  *
  * export class ExampleComponent {
  *  // Properties definitions

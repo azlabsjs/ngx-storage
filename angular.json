@@ -3,69 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lib": {
-      "projectType": "library",
-      "root": "projects/lib",
-      "sourceRoot": "projects/lib/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/lib/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/lib/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/lib/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/lib/src/test.ts",
-            "tsConfig": "projects/lib/tsconfig.spec.json",
-            "karmaConfig": "projects/lib/karma.conf.js"
-          }
-        }
-      }
-    },
-    "@iazlabs/ngx-storage": {
-      "projectType": "library",
-      "root": "projects/iazlabs/ngx-storage",
-      "sourceRoot": "projects/iazlabs/ngx-storage/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/iazlabs/ngx-storage/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/iazlabs/ngx-storage/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/iazlabs/ngx-storage/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/iazlabs/ngx-storage/src/test.ts",
-            "tsConfig": "projects/iazlabs/ngx-storage/tsconfig.spec.json",
-            "karmaConfig": "projects/iazlabs/ngx-storage/karma.conf.js"
-          }
-        }
-      }
-    },
-    "ngx-storage": {
+    "@azlabsjs/ngx-storage": {
       "projectType": "library",
       "root": "projects/ngx-storage",
       "sourceRoot": "projects/ngx-storage/src",

@@ -1,5 +1,5 @@
 import { InjectionToken } from '@angular/core';
-import { StorageInterface } from '@iazlabs/secure-web-storage';
+import { StorageInterface } from '@azlabsjs/secure-web-storage';
 
 // @internal
 export const STORAGE_SECRET = new InjectionToken<string>(
@@ -17,7 +17,7 @@ export const STORAGE_PREFIX = new InjectionToken<string>(
  * keys and values while they are added to cache
  *
  * @example
- * import {DOCUMENT_SESSION_STORAGE} from '@iazlabs/ngx-storage';
+ * import {DOCUMENT_SESSION_STORAGE} from '@azlabsjs/ngx-storage';
  *
  * // Inject the token in an angular component, or service
  * export class ExampleComponent {
@@ -39,7 +39,7 @@ export const DOCUMENT_SESSION_STORAGE = new InjectionToken<Storage>(
  * keys and values while they are added to cache
  *
  * @example
- * import {DOCUMENT_LOCAL_STORAGE} from '@iazlabs/ngx-storage';
+ * import {DOCUMENT_LOCAL_STORAGE} from '@azlabsjs/ngx-storage';
  *
  * // Inject the token in an angular component, or service
  * export class ExampleComponent {
@@ -69,7 +69,7 @@ export const DOCUMENT_LOCAL_STORAGE = new InjectionToken<Storage>(
  * The default storage internal may change but the interface is stable enough
  *
  * @example
- * import {DEFAULT_STORAGE, StorageInterface } from '@iazlabs/ngx-storage';
+ * import {DEFAULT_STORAGE, StorageInterface } from '@azlabsjs/ngx-storage';
  *
  * // Inject the token in an angular component, or service
  * export class ExampleComponent {
@@ -96,7 +96,7 @@ export const DEFAULT_STORAGE = new InjectionToken<StorageInterface>(
  *
  *
  * @example
- * import {FAKE_STORAGE, StorageInterface } from '@iazlabs/ngx-storage';
+ * import {FAKE_STORAGE, StorageInterface } from '@azlabsjs/ngx-storage';
  *
  * // Inject the token in an angular component, or service
  * export class ExampleComponent {

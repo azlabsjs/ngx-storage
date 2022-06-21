@@ -2,7 +2,7 @@ import { Inject, Injectable, Optional } from '@angular/core';
 import {
   createStorage,
   InMemoryStorage as BaseInMemoryStorage,
-} from '@iazlabs/secure-web-storage';
+} from '@azlabsjs/secure-web-storage';
 import { InternalStorage } from './base-store';
 import { STORAGE_PREFIX, STORAGE_SECRET } from './tokens';
 import { StorageInterface } from './types';

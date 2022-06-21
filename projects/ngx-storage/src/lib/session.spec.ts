@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { TestBed } from '@angular/core/testing';
-import { createStorage } from '@iazlabs/secure-web-storage';
+import { createStorage } from '@azlabsjs/secure-web-storage';
 import { SessionStorage } from './session';
 import { DOCUMENT_SESSION_STORAGE, STORAGE_PREFIX } from './tokens';
 import { StorageInterface } from './types';

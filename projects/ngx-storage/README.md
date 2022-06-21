@@ -4,11 +4,11 @@ Simple but useful package providing abstraction arround Browsers various storage
 
 ## Dependencies
 
-They library is dependent on Angular core and common, crypto-es the [https://github.com/iazlabs/secure-web-storage/packages/1266504] a.k.a secure-web-storage libraries.
+They library is dependent on Angular core and common, crypto-es the [https://github.com/azlabsjs/secure-web-storage/packages/1266504] a.k.a secure-web-storage libraries.
 
-| @iazlabs/ngx-storage | Angular | @iazlabs/secure-web-storage |
-|----------------------|---------|-----------------------------|
-| ^0.1.x               | ^13.2.x | ^0.1.x                      |
+| @azlabsjs/ngx-storage | Angular | @azlabsjs/secure-web-storage  |
+|-----------------------|---------|-------------------------------|
+| ^0.1.x                | ^13.2.x | ^0.1.x                        |
 
 ## Usage
 
@@ -17,7 +17,7 @@ To use the package in Angular Application, developper must add module exposed by
 ```ts
 // app.module.ts
 import { NgModule } from '@angular/core';
-import { StorageModule } from '@iazlabs/ngx-storage';
+import { StorageModule } from '@azlabsjs/ngx-storage';
 
 @NgModule({
  // declarations, providers, etc...
@@ -41,7 +41,7 @@ using javascript {@see JSON.stringify()} api. The default storage internal imple
 
 ```ts
 import { Inject, Component } from '@angular/core';
-import {DEFAULT_STORAGE, StorageInterface } from '@iazlabs/ngx-storage';
+import {DEFAULT_STORAGE, StorageInterface } from '@azlabsjs/ngx-storage';
 
 // Inject the token in an angular component, or service
 @Component({
@@ -74,7 +74,7 @@ export class ExampleComponent {
 The package also comes with a Javascipt {@see Map} a.k.a Hash map based in memory storage that can be used for testing purpose as it does not persist storage state.
 
 ```ts
-import {FAKE_STORAGE, StorageInterface } from '@iazlabs/ngx-storage';
+import {FAKE_STORAGE, StorageInterface } from '@azlabsjs/ngx-storage';
 // Inject the token in an angular component, or service
 export class ExampleComponent {
   constructor(@Inject(FAKE_STORAGE) storage: StorageInterface) {
@@ -90,7 +90,7 @@ If the developper purpose is to use to use browser {@see Storage} api but still 
 
 ```ts
 import { Inject, Component } from '@angular/core';
-import {DOCUMENT_LOCAL_STORAGE, DOCUMENT_SESSION_STORAGE } from '@iazlabs/ngx-storage';
+import {DOCUMENT_LOCAL_STORAGE, DOCUMENT_SESSION_STORAGE } from '@azlabsjs/ngx-storage';
 
 // Inject the token in an angular component, or service
 @Component({
