@@ -31,6 +31,6 @@ jobs:
       - name: Build
         run: npm run build @azlabsjs/ngx-storage
 
-      - run: cd dist/ngx-storage && npm publish
+      - run: cd dist/ngx-storage && npm publish --access public
     env:
       NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
