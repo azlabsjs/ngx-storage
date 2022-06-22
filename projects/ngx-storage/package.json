@@ -1,6 +1,6 @@
 {
   "name": "@azlabsjs/ngx-storage",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "peerDependencies": {
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0",
