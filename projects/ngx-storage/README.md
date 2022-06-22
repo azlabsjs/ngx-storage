@@ -8,7 +8,9 @@ They library is dependent on Angular core and common, crypto-es the [https://git
 
 | @azlabsjs/ngx-storage | Angular | @azlabsjs/secure-web-storage  |
 |-----------------------|---------|-------------------------------|
-| ^0.1.x                | ^13.2.x | ^0.1.x                        |
+| ^0.13.x               | ^13.x   | ^0.1.x                        |
+|-----------------------|---------|-------------------------------|
+| ^0.13.x               | ^14.3   | ^0.1.x                        |
 
 ## Usage
 
