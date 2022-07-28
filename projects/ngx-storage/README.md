@@ -4,11 +4,11 @@ Simple but useful package providing abstraction arround Browsers various storage
 
 ## Dependencies
 
-They library is dependent on Angular core and common, crypto-es the [https://github.com/azlabsjs/secure-web-storage/packages/1266504] a.k.a secure-web-storage libraries.
+They library is dependent on Angular core and common, `crypto-es` the [https://github.com/azlabsjs/secure-web-storage/packages/1266504] a.k.a secure-web-storage libraries.
 
-| @azlabsjs/ngx-storage | Angular | @azlabsjs/secure-web-storage  |
-|-----------------------|---------|-------------------------------|
-| ^0.1.x                | ^13.2.x | ^0.1.x                        |
+| @azlabsjs/ngx-storage | Angular | @azlabsjs/secure-web-storage   |
+|-----------------------|---------|--------------------------------|
+| ^0.13.x               | ^13.2.x | ^0.1.x                         |
 
 ## Usage
 
