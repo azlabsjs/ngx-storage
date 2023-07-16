@@ -14,4 +14,4 @@ current_dir="${cwd}/projects/ngx-storage"
 echo $current_dir
 cd "$current_dir"
 tag=$(npm version $version)
-git commit -m "version $tag release"
+git commit -a -m "version $tag release"
