@@ -1,7 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { TestBed } from '@angular/core/testing';
 import { createStorage, SecureWebStorage } from '@azlabsjs/secure-web-storage';
-import { DOCUMENT_LOCAL_STORAGE, DOCUMENT_SESSION_STORAGE, STORAGE_PREFIX } from './tokens';
+import { DOCUMENT_LOCAL_STORAGE, DOCUMENT_SESSION_STORAGE } from './tokens';
 
 describe('Storage Tokens Tests', () => {
   let service: Storage;

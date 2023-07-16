@@ -21,7 +21,7 @@ export class InMemoryStorage implements StorageInterface {
     );
   }
 
-  public get(key: string): any {
+  public get<T>(key: string): T {
     return this._internal.get(key);
   }
 

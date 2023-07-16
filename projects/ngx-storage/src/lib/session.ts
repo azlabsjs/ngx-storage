@@ -49,7 +49,7 @@ export class SessionStorage implements StorageInterface {
     this._internal = new InternalStorage(cache, prefix);
   }
 
-  public get(key: string): any {
+  public get<T>(key: string): T {
     return this._internal.get(key);
   }
 
