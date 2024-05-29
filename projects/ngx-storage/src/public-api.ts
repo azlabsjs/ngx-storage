@@ -11,4 +11,5 @@ export {
   DOCUMENT_SESSION_STORAGE,
   DEFAULT_STORAGE,
   FAKE_STORAGE,
+  IN_MEMORY_STORAGE
 } from './lib/tokens';

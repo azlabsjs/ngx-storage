@@ -1,9 +1,8 @@
-import { DOCUMENT } from '@angular/common';
 import { TestBed } from '@angular/core/testing';
-import { createStorage } from '@azlabsjs/secure-web-storage';
 import { SessionStorage } from './session';
-import { DOCUMENT_SESSION_STORAGE, STORAGE_PREFIX } from './tokens';
+import { DOCUMENT_SESSION_STORAGE } from './tokens';
 import { StorageInterface } from './types';
+import { provideSessionStorage } from './providers';
 
 describe('SessionStorage Tests', () => {
   let service: StorageInterface;
@@ -11,21 +10,13 @@ describe('SessionStorage Tests', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       providers: [
-        SessionStorage,
+        provideSessionStorage('SECRET'),
         {
-          provide: STORAGE_PREFIX,
-          useValue: 'prefix',
-        },
-        {
-          provide: DOCUMENT_SESSION_STORAGE,
-          useFactory: (document: Document) => {
-            const { defaultView } = document;
-            if (!defaultView) {
-              throw new Error('Browser window object is not available');
-            }
-            return createStorage(defaultView.sessionStorage, 'SECRET');
+          provide: SessionStorage,
+          useFactory: (cache: Storage) => {
+            return new SessionStorage(cache, 'prefix');
           },
-          deps: [DOCUMENT],
+          deps: [DOCUMENT_SESSION_STORAGE],
         },
       ],
     }).compileComponents();

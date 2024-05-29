@@ -1,32 +1,24 @@
-import { DOCUMENT } from '@angular/common';
 import { TestBed } from '@angular/core/testing';
-import { createStorage } from '@azlabsjs/secure-web-storage';
 import { LocalStorage } from './local';
-import { DOCUMENT_LOCAL_STORAGE, STORAGE_PREFIX } from './tokens';
+import { DOCUMENT_LOCAL_STORAGE } from './tokens';
+import { provideLocalStorage } from './providers';
 
 describe('LocalStorage Tests', () => {
   let service: LocalStorage;
 
-  beforeEach( async () => {
+  beforeEach(async () => {
     await TestBed.configureTestingModule({
       providers: [
         LocalStorage,
+        provideLocalStorage('SECRET'),
         {
-          provide: STORAGE_PREFIX,
-          useValue: 'prefix'
-        },
-        {
-          provide: DOCUMENT_LOCAL_STORAGE,
-          useFactory: (document: Document) => {
-            const { defaultView } = document;
-            if (!defaultView) {
-              throw new Error('Browser window object is not available');
-            }
-            return createStorage(defaultView.localStorage, 'SECRET');
+          provide: LocalStorage,
+          useFactory: (storage: Storage) => {
+            return new LocalStorage(storage, 'prefix');
           },
-          deps: [DOCUMENT],
+          deps: [DOCUMENT_LOCAL_STORAGE],
         },
-      ]
+      ],
     }).compileComponents();
     service = TestBed.inject(LocalStorage);
   });

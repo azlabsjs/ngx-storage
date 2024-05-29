@@ -15,6 +15,9 @@ import {
 import { ModuleConfig } from './types';
 
 /**
+ * @deprecated Use specific providers to register `storage` services
+ * required for your application
+ * 
  * ngx-storage library module that provides components a.k.a services
  * required to use the library effectively.
  *

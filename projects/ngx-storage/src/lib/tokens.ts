@@ -89,6 +89,17 @@ export const DEFAULT_STORAGE = new InjectionToken<StorageInterface>(
  * Provide an abstraction for {@see SessionStorage} service.
  *
  * Note: It provides an in-memory javascript map cache provider
+ * 
+ * @deprecated Use `IN_MEMORY_STORAGE` injection token instead
+ */
+export const FAKE_STORAGE = new InjectionToken<StorageInterface>(
+  'IN MEMORY STORAGE PROVIDER TOKEN'
+);
+
+
+/**
+ *
+ * Note: It provides an in-memory javascript map cache provider
  *
  *
  * Note: It internally serialize every value before adding it to the cache
@@ -96,18 +107,18 @@ export const DEFAULT_STORAGE = new InjectionToken<StorageInterface>(
  *
  *
  * @example
- * import {FAKE_STORAGE, StorageInterface } from '@azlabsjs/ngx-storage';
+ * import {IN_MEMORY_STORAGE, StorageInterface } from '@azlabsjs/ngx-storage';
  *
  * // Inject the token in an angular component, or service
  * export class ExampleComponent {
  *
- *  constructor(@Inject(FAKE_STORAGE) storage: StorageInterface) {
+ *  constructor(@Inject(IN_MEMORY_STORAGE) storage: StorageInterface) {
  *      // Provide initialization logic
  *  }
  *
  *  // Work with or use the session storage object
  * }
  */
-export const FAKE_STORAGE = new InjectionToken<StorageInterface>(
+export const IN_MEMORY_STORAGE = new InjectionToken<StorageInterface>(
   'IN MEMORY STORAGE PROVIDER TOKEN'
 );

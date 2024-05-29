@@ -4,6 +4,8 @@ import { DOCUMENT_LOCAL_STORAGE, STORAGE_PREFIX } from './tokens';
 import { StorageInterface } from './types';
 
 /**
+ * @deprecated Please use browser compatible storage instance via `DOCUMENT_LOCAL_STORAGE` token
+ * 
  * Provides a simple API around browser {@see window.localStorage} API
  * and add a level of security on top of the internal api by encrpting
  * key -> value pair before they are cached.

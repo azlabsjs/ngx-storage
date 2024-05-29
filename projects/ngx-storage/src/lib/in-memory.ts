@@ -7,12 +7,15 @@ import { InternalStorage } from './base-store';
 import { STORAGE_PREFIX, STORAGE_SECRET } from './tokens';
 import { StorageInterface } from './types';
 
+/**
+ * @deprecated Use `@Inject(IN_MEMORY_STORAGE)` to provide an in-memory storage instance
+ */
 @Injectable()
 export class InMemoryStorage implements StorageInterface {
   private _internal!: StorageInterface;
 
   constructor(
-    @Inject(STORAGE_SECRET) private secret: string,
+    @Inject(STORAGE_SECRET) secret: string,
     @Optional() @Inject(STORAGE_PREFIX) prefix: string
   ) {
     this._internal = new InternalStorage(
