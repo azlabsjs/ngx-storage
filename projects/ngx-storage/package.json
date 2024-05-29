@@ -1,10 +1,10 @@
 {
   "name": "@azlabsjs/ngx-storage",
-  "version": "0.17.2",
+  "version": "0.17.4",
   "peerDependencies": {
-    "@angular/common": "^16.0",
-    "@angular/core": "^16.0",
-    "@azlabsjs/secure-web-storage": "^0.1.10"
+    "@angular/common": "^17.3.10",
+    "@angular/core": "^17.3.10",
+    "@azlabsjs/secure-web-storage": "^0.2.3"
   },
   "author": "azandrew-sidoine <azandrewdevelopper@gmail.com>",
   "dependencies": {
