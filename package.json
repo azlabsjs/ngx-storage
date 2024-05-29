@@ -24,6 +24,9 @@
     "tslib": "^2.3.0",
     "zone.js": "^0.14.6"
   },
+  "peerDependencies": {
+    "@azlabsjs/secure-web-storage": "^0.2.3"
+  },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.3.8",
     "@angular-eslint/builder": "17.5.2",
