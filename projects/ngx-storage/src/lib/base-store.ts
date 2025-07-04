@@ -7,15 +7,14 @@ import { StorageInterface } from '@azlabsjs/secure-web-storage';
  */
 // @internal
 export class InternalStorage implements StorageInterface {
-
-  // Instance initializer
+  // instance initializer
   constructor(private cache: Storage, private _prefix?: string) {}
 
   private prefix(key: string) {
     return this._prefix ? `${this._prefix}_${key}` : key;
   }
 
-  get<T>(key: string): T {
+  get<T>(key: string): T | null | undefined {
     const value = this.cache.getItem(this.prefix(key));
     return typeof value === 'undefined' || value === null
       ? undefined
