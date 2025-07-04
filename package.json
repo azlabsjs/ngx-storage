@@ -33,7 +33,7 @@
     "@angular-eslint/template-parser": "18.4.3",
     "@angular/cli": "^18.2.20",
     "@angular/compiler-cli": "^18.2.13",
-    "@azlabsjs/secure-web-storage": "^0.2.3",
+    "@azlabsjs/secure-web-storage": "^0.2.10",
     "@types/jasmine": "^3.10.0",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "^7.2.0",

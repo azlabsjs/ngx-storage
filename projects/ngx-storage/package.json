@@ -4,7 +4,7 @@
   "peerDependencies": {
     "@angular/common": "^16.0",
     "@angular/core": "^16.0",
-    "@azlabsjs/secure-web-storage": "^0.1.10"
+    "@azlabsjs/secure-web-storage": "^0.2.10"
   },
   "author": "azandrew-sidoine <azandrewdevelopper@gmail.com>",
   "dependencies": {
