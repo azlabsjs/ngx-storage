@@ -2,9 +2,9 @@
   "name": "@azlabsjs/ngx-storage",
   "version": "0.17.2",
   "peerDependencies": {
-    "@angular/common": "^16.0",
-    "@angular/core": "^16.0",
-    "@azlabsjs/secure-web-storage": "^0.2.10"
+    "@angular/common": ">=17.0.0 || <20.0.0",
+    "@angular/core": ">=17.0.0 || <20.0.0",
+    "@azlabsjs/secure-web-storage": "^0.2.12"
   },
   "author": "azandrew-sidoine <azandrewdevelopper@gmail.com>",
   "dependencies": {
