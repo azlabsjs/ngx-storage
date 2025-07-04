@@ -51,7 +51,7 @@ export class LocalStorage implements StorageInterface {
     this._internal = new InternalStorage(cache, prefix);
   }
 
-  public get<T>(key: string): T {
+  public get<T>(key: string): T | null | undefined {
     return this._internal.get(key);
   }
 

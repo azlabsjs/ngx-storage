@@ -5,7 +5,7 @@ import { StorageInterface } from './types';
 
 /**
  * @deprecated Please use browser compatible storage instance via `DOCUMENT_SESSION_STORAGE` token
- * 
+ *
  * Provides a simple API around browser {@see window.sessionStorage} API
  * and add a level of security on top of the internal api by encrpting
  * key -> value pair before they are cached.
@@ -51,7 +51,7 @@ export class SessionStorage implements StorageInterface {
     this._internal = new InternalStorage(cache, prefix);
   }
 
-  public get<T>(key: string): T {
+  public get<T>(key: string): T | null | undefined {
     return this._internal.get(key);
   }
 
